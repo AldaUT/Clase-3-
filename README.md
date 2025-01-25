@@ -1,2 +1,2 @@
-# Clase-3-
-Clase 3 
+# codigo_colectivo
+Actividad de clase: Crearemos una función colectivamente a partir de este repositorio.

@@ -12,11 +12,12 @@ def historia_colectiva():
     while text_valid < 2:
         try:
             edad = int(input('¿Cuantos años tienes? '))
-            text_valid+=1
-            if edad >= 1 and edad < 18:
-                print ('¡Increible! Es fantastico que alguien tan joven conozca sobre lenguajes de programación.')
+            if edad >= 5 and edad < 18:
+                print ('¡Increible! Es fantastico que alguien tan joven conozca acerca de lenguajes de programación.')
+                text_valid+=1
             elif edad >= 18 and edad <= 99:
                 print ('Excelente. Te felicito por tu deseo de aprender Python.')
+                text_valid+=1
             else:
                 print ('No entendí tu respuesta.')
         except ValueError:
@@ -42,7 +43,7 @@ def historia_colectiva():
 
     print(f"\n{nombre} llegó a la primera clase de Python y preparó su equipo de trabajo.")
     if estado == "curioso":
-        print(f"{nombre} tenia mucha curiosidad de saber nuevas formas de resolver problemas usando Python")
+        print(f"{nombre} tenia mucha curiosidad de saber nuevas formas de resolver problemas usando Python.")
     elif estado == "dormido":
         print(f"{nombre} llegó un poco dormido ya que estaba de vacaciones y se atrasó en las semanas de actividades. ¡Pero esta semana se pondrá al corriente!")
     elif estado == "emocionado":
@@ -50,18 +51,18 @@ def historia_colectiva():
     elif estado == "triste":
         print(f"{nombre} propusó concentrare en la clase para no pensar en ideas negativas.")
     elif estado == "enojado" or estado == "frustrado":
-        print(f"Por más que intentaba, {nombre} divagaba y no estaba atento a la clase.")
+        print(f"Por más que intentaba, {nombre} divagaba mucho y no prestaba atención a lo que pasaba a su alrededor.")
     else:
         print(f"{nombre} llegó con una actitud tranquila, dispuesto a aprender a su propio ritmo.")
 
-    print ('\nDespues de un rato, la maestra dió instrucciones para hacer un trabajo en clase.')
+    print ('\nEn un momento dado, la maestra dió instrucciones para hacer un trabajo en clase.')
     print ('Se otorgaron veinte minutos para preparar un ejercicio que sería resuelto por otro compañero.')
     if respuesta == 1:
         print (f'{nombre} cumplió la tarea con exito y envió su trabajo al repositorio grupal.')
-        print ('La tarea cumplió su función y sirvió como modelo a usar para la clase del día siguiente.')
+        print (f'El código de {nombre} cumplió su función adecuadamente y sirvió como modelo a usar para la clase del día siguiente.')
     elif respuesta == 2:
         print (f'{nombre} solo cambio una que otra oración. Costo poco trabajo, pero al final se envió algo.')
-        print('El trabajo fue entregado y recibido por la otra persona. \nSin embargo, no pudo ejecutarse el código y no recibió calificación alguna.')
+        print (f'El trabajo fue entregado y recibido por la otra persona. \nSin embargo, no pudo ejecutarse el código y {nombre} no recibió calificación alguna.')
     elif respuesta == 3:
         print (f'{nombre} no sabia bien lo que estaba haciendo. Hizo su esfuerzo pero su trabajo era rebuscado y poco organizado.')
         print ('Al momento de mandar el trabajo, se lo pasó en privado a su compañero y le pidió que le hiciera el paro.')

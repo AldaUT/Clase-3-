@@ -1,7 +1,15 @@
+animo={
+    "curioso": "tenia mucha curiosidad de saber nuevas formas de resolver problemas usando Python",
+    "dormido": "llegó un poco dormido ya que estaba de vacaciones y se atrasó en las semanas de actividades. ¡Pero esta semana se pondrá al corriente!",
+    "emocionado": "estaba muy emocionado por aprender cosas nuevas y listo para el desafío.",
+    "triste": "propusó concentrare en la clase para no pensar en ideas negativas.",
+    "enojado": "divagaba mucho y no prestaba atención a lo que pasaba a su alrededor."
+}
+
 def historia_colectiva():
     print("Bienvenidos a la gran historia de nuestros alumnos y Python.")
     text_valid = 0
-    while text_valid < 1:
+    while text_valid == 0:
         nombre = input("Dime tu nombre (personaje principal): ").capitalize()
         if nombre.isalpha() and len(nombre) > 3:
             print(f"Mucho gusto de conocerte, {nombre}.")
@@ -9,7 +17,7 @@ def historia_colectiva():
         else:
             print ('¿Me recuerdas tu nombre por favor?')
     
-    while text_valid < 2:
+    while text_valid == 1:
         try:
             edad = int(input('¿Cuantos años tienes? '))
             if edad >= 5 and edad < 18:
@@ -23,14 +31,14 @@ def historia_colectiva():
         except ValueError:
             print ('No entendí tu respuesta.')
     
-    while text_valid < 3:
+    while text_valid == 2:
         estado = input("¿Cómo te sientes al llegar a una clase? (ejemplo: curioso, dormido, emocionado): ").strip().lower()
         if nombre.isalpha() and len(nombre) >= 3:
             text_valid+=1
         else:
             print ('¿Cómo te sientes?')
 
-    while text_valid < 4:
+    while text_valid == 3:
         print (f'¿Cómo resolverias un problema mediante el uso de código en poco tiempo?')
         try:
             respuesta = int(input('Usando mis conocimientos y aprendizajes (1) / Plagio de internet (2) / A la última hora y a ver que sale (3): '))
@@ -43,15 +51,15 @@ def historia_colectiva():
 
     print(f"\n{nombre} llegó a la primera clase de Python y preparó su equipo de trabajo.")
     if estado == "curioso":
-        print(f"{nombre} tenia mucha curiosidad de saber nuevas formas de resolver problemas usando Python.")
+        print(nombre, animo.get("curioso"))
     elif estado == "dormido":
-        print(f"{nombre} llegó un poco dormido ya que estaba de vacaciones y se atrasó en las semanas de actividades. ¡Pero esta semana se pondrá al corriente!")
+        print(nombre, animo.get("dormido"))
     elif estado == "emocionado":
-        print(f"{nombre} estaba muy emocionado por aprender cosas nuevas y listo para el desafío.")
+        print(nombre, animo.get("emocionado"))
     elif estado == "triste":
-        print(f"{nombre} propusó concentrare en la clase para no pensar en ideas negativas.")
+        print(nombre, animo.get("triste"))
     elif estado == "enojado" or estado == "frustrado":
-        print(f"Por más que intentaba, {nombre} divagaba mucho y no prestaba atención a lo que pasaba a su alrededor.")
+        print("Por más que intentaba, " + nombre + animo.get("enojado"))
     else:
         print(f"{nombre} llegó con una actitud tranquila, dispuesto a aprender a su propio ritmo.")
 
